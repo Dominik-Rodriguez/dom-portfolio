@@ -1,0 +1,97 @@
+.header{
+    position: fixed;
+    float: left;
+    background: rgb(27, 27, 27);
+    font-size: 11px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    // .d-logo{
+    //     width: 40px;
+    //     background: black;
+    //     padding: 12px;
+    //     // margin-bottom: -250px;
+    // }
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 45vh;
+        // padding-bottom: 30px;
+        a{
+            text-decoration: none;
+        }
+        .list-item{
+            color: rgb(122, 122, 122);
+            cursor: pointer;
+        }
+        .list-item:hover{
+            color: cyan;
+            transition: 0.4s;
+        }
+        .list-item:active{
+            color: cyan;
+        }
+    }
+    .bottom-icons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100px;
+        padding-bottom: 30px
+        ;
+        .fa{
+            color: rgb(122, 122, 122);
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .fa:hover{
+            color: cyan;
+            transition: 0.4s;
+        }
+    }
+    .hamburger{
+        display: none;
+    }
+}
+@media(max-width: 770px) {
+    header{
+        position: fixed;
+        float: top;
+        display: flex;
+        width: 100vw;
+        height: 66px;
+        justify-content: space-between;
+        align-items: center;
+        background: rgb(27, 27, 27);
+        .d-logo{
+            width: 32px;
+            height: 50px;
+            padding: 8px;
+        }
+        .hamburger{
+            font-size: 30px;
+            cursor: pointer;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        .hamburger:active{
+            color: cyan;
+            transition: 0.2s;
+        }
+        .shown{
+            transition: 2s;
+        }
+        .hidden{
+            display: none;
+        }
+        .home{
+            width: 30px;
+        }
+        .home:hover{
+            fill: cyan;
+        }
+    }
+}
