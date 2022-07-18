@@ -1,14 +1,14 @@
 import { Outlet } from "react-router-dom";
+import Header from "../Header/Header";
 import WordSphere from '../WordSphere/WordSphere';
-import './PageContainer.css';
+import './PageContainer.scss';
 
 const PageContainer = () => {
     return (
         <div className="page-container">
             <div className="page-header">
-                This will eventually be a menu.
+                <Header />
             </div>
-            <WordSphere />
             <div className="page-content">
                 <Outlet />
             </div>

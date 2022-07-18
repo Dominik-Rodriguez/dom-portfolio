@@ -1,7 +1,9 @@
+import WordSphere from "../WordSphere/WordSphere";
+
 const LandingPage = () => {
     return (
         <div>
-            This is the landing page.
+            <WordSphere />
         </div>
     );
 };
