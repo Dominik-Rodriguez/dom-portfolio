@@ -31,9 +31,13 @@ const Header = () => {
             </div>
             <div className="bottom-icons">
                 <a href="https://github.com/Dominik-Rodriguez">
-                    <FontAwesomeIcon icon={ faGithub } />
-                    <FontAwesomeIcon icon={ faLinkedin } />
-                    <FontAwesomeIcon icon={ faInstagram } />
+                    <FontAwesomeIcon className='icon' icon={ faGithub } />
+                </a>
+                <a href="https://www.linkedin.com/in/dominikrodriguez/">
+                    <FontAwesomeIcon className="icon" icon={ faLinkedin } />
+                </a>
+                <a href='https://www.instagram.com/dominikrodriguez_/'>
+                    <FontAwesomeIcon className="icon" icon={ faInstagram } />
                 </a>
             </div>
         </header>

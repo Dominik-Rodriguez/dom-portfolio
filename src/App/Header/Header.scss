@@ -19,6 +19,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         height: 45vh;
+        align-items: center;
         // padding-bottom: 30px;
         a{
             text-decoration: none;
@@ -39,15 +40,15 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         height: 100px;
-        padding-bottom: 30px
-        ;
-        .fa{
+        padding-bottom: 30px;
+        .icon{
             color: rgb(122, 122, 122);
             font-size: 20px;
             cursor: pointer;
         }
-        .fa:hover{
+        .icon:hover{
             color: cyan;
             transition: 0.4s;
         }

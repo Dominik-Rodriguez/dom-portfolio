@@ -8,6 +8,7 @@ import PageContainer from './PageContainer/PageContainer';
 import LandingPage from './LandingPage/LangingPage';
 import { Container } from 'react-dom';
 import AboutMe from './AboutMe/AboutMe';
+import Skills from './Skills/Skills';
 
 function App() {
 	// const particlesInit = async (main: any) => {
@@ -25,6 +26,7 @@ function App() {
     	<Route path='/' element={ <PageContainer /> }>
     	    <Route index element={ <LandingPage /> }></Route>
 			<Route path='/about' element={ <AboutMe /> }></Route>
+			<Route path='/skills' element={ <Skills /> }></Route>
     	</Route>
     </Routes>
 
