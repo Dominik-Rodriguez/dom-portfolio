@@ -1,4 +1,5 @@
 .about{
+  display: flex;
     #tsparticles {
       position: fixed;
       width: 100%;
@@ -14,6 +15,7 @@
       display: flex;
       flex-direction: column;
       height: 100vh;
+      width: 50ve;
       align-content: center;
       align-items: center;
       justify-content: center;
@@ -58,6 +60,16 @@
         // height: 400px;
       }
     }
+
+    .right-side{
+      width: 50vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // flex-direction: ;
+    }
+
     @keyframes rubberBand {
       from {
         transform: scale3d(1, 1, 1);

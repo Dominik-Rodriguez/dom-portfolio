@@ -1,17 +1,32 @@
-import { Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../Header/Header";
-import WordSphere from '../WordSphere/WordSphere';
+import Loader from "../Loader/Loader";
 import './PageContainer.scss';
 
 const PageContainer = () => {
+	
+    const [loading, setLoading] = useState(false);
+
+    const location = useLocation();
+    useEffect(() => {
+        setLoading(true);
+		setTimeout(() => setLoading(false), 1500);
+    }, [location]);
     return (
         <div className="page-container">
-            <div className="page-header">
-                <Header />
-            </div>
-            <div className="page-content">
-                <Outlet />
-            </div>
+            { loading ? (
+                <Loader />
+            ) : (
+                <>
+                    <div className="page-header">
+                        <Header />
+                    </div>
+                    <div className="page-content">
+                        <Outlet />
+                    </div>
+                </>
+            )}
         </div>
     )
 };

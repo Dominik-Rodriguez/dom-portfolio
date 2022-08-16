@@ -1,10 +1,54 @@
 import WordSphere from "../WordSphere/WordSphere";
 import './LandingPage.scss';
 import { Link } from "react-router-dom";
+import Particles from "react-tsparticles";
+import { useCallback } from "react";
+import { loadFull } from "tsparticles";
 
 const LandingPage = () => {
+	const particlesInit = useCallback(async (engine: any) => { await loadFull(engine) }, []);
+
+    const particlesLoaded = useCallback(async (container: any) => {}, []);
+
 	return (
 		<div className="home">
+			<Particles
+                id="tsparticles"
+                init={particlesInit}
+                loaded={particlesLoaded}
+                options={{
+                    fpsLimit: 120,
+                    interactivity:{
+                        detectsOn: 'canvas',
+                        events: {
+                            onClick: {
+                                enable: true,
+                                mode: 'push'
+                            },
+                            resize: true
+                        },
+                    },
+                    particles: {
+                        color: {
+                            value: '#FF00FF'
+                        },
+                        move: {
+                            enable: true,
+                        },
+                        links: {
+                            enable: true,
+                            color: '#FF00FF'
+                        },
+                        number: {
+                            density: {
+                                enable: true,
+                                value_area: 800
+                            },
+                            value: 90
+                        }
+                    }
+                }}
+            />
 			<div className="main-text">
 				<div className="home-text">
 					<div className="text">H</div>
@@ -48,7 +92,6 @@ const LandingPage = () => {
 				</Link>
 			</div>
 		</div>
-		<WordSphere />
 	</div>
 	);
 };

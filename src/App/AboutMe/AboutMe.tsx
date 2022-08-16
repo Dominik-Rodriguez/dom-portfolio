@@ -1,3 +1,4 @@
+import WordSphere from '../WordSphere/WordSphere';
 import './AboutMe.scss';
 
 const AboutMe = () => {
@@ -22,12 +23,10 @@ const AboutMe = () => {
                         I have greatly improved my development skills while working in the field and though I still have <i>what feels like</i> 
                         everything to learn I am happy to talk with anyone about anything tech related and maybe even work together!
                     </p><br></br>
-                    {/*
-                        TODO: Create a little timeline showcase my development experience in an aesthetic way.
-                        I will probably host this picture on amazon in an s3 bucket (?)
-                    */}
-                    {/* <img /> */}
                 </div>
+            </div>
+            <div className='right-side'>
+                <WordSphere />
             </div>
         </div>
     )
